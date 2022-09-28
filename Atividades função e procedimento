@@ -1,0 +1,124 @@
+#subalgoritmo - procedimento ou funções - é uma parte do algortmo que recebe um nome.
+
+
+# calcular e mostrar o fatoreal: Procedimento - Sem valor  x()
+def fatorial(num):
+    global x
+    z=1
+    for i in range(num,0,-1):
+    
+        z=z*i
+
+    print("Fatorial =",z)
+    
+
+while(True):
+
+    x = int(input("Insira o valor:"))
+    fatorial(x)
+    if(x == 0):
+        break
+
+
+ # com o return:   Função -Tem o comando return, tem o valor. y=x()
+
+
+
+
+def fatorial(num):
+    global x
+    z = 1
+    for i in range(num, 0, -1):
+
+        z = z*i
+
+    return z 
+    
+
+
+while(True):
+
+    x = int(input("Insira o valor:"))
+
+    resultado = fatorial (x)
+
+    print("O fatoial de",x ,"é", resultado )
+
+    if(x == 0):
+        break
+      
+def menorvalor():
+    global vetor
+    aux=1
+    menor= 100000
+    for i in range (0,len(vetor)):
+        if (menor> vetor[i]):
+            menor = vetor[i]
+
+            return menor
+
+vetor = [0]*10
+
+for i in range(0,len(vetor)):
+    vetor[i]= int(input("Insira o Valor:"))
+
+menor=menorvalor() 
+print(menor)   
+
+
+# Crie procedimentos com parâmetros informados pelo usuário no programa principal:
+# Faça uma procedimento que soma dois números. Deve ser utilizado um procedimento chamado somar(), que deve receber os números a serem somados, somar os números e apresentar o resultado na tela.
+def somar(a,b):
+    
+    resultado = a + b
+    print("A soma de ",a, "+",b,"=", resultado)
+
+    
+valor1= int(input("Insira o primeiro numero:"))
+valor2 = int(input("Insira o  Segundo Numero:"))
+somar(valor1,valor2)
+
+
+
+# Faça um procedimento que multiplica dois números. Deve ser utilizado um procedimento chamado multiplicar(), que deve receber os números e realizar a operação de multiplicação, apresentando o resultado na tela.
+
+def multiplicar(a,b):
+    resultado= a*b
+
+    print("A multiplicação de",a,"X",b,"=",resultado)
+
+valor1=int(input("Insira o primeiro valor:"))
+valor2=int(input("Insira o Segundo valor:"))
+
+multiplicar(valor1,valor2)
+
+# Faça um procedimento que calcule a raiz quadrada de um número chamado calcularRaiz(). O procedimento deve receber o número por parâmetro, efetuar o cálculo e apresentar o resultado.
+import math
+def calcularRaiz(a):
+    Resultado=float(math.sqrt(a))
+    print("A raiz quadrada é:", Resultado)
+
+raizNumero=float(input("Insira o valor:"))
+calcularRaiz(raizNumero)
+
+# Faça um procedimento que calcule a potência de um número(XY) chamado calcularPotencia(). O procedimento deve receber os números por parâmetro, efetuar o cálculo e apresentar o resultado.
+import math
+def calcularPotencia(a,b):
+    x=math.pow(a,b)
+    print("a potencia de ",a, "a",b,"=",x)
+
+insira1=int(input("Insira o primeiro valor:"))
+insira2=int(input("insira o segundo valor:" ))
+calcularPotencia(insira1,insira2)
+
+
+# Faça um procedimento que calcule a tabuada de 1 a 10 para um número chamado calcularTabuada(). O procedimento deve receber o número por parâmetro, efetuar o cálculo e apresentar o resultado.
+
+
+def calcularTabuada(a):
+    for i in range (1,11):
+        resultado=i*a
+        print(a,"X",i,"=",resultado)
+
+num1=int(input("Escolha o valor da tabuada:"))
+calcularTabuada(num1)
