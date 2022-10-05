@@ -163,7 +163,6 @@ def somarImpares(recebido):
 
 
 
-
 insira= int(input("Insira um Numero PAra tamanho do vetor:"))
 vetorCriado=criarVetor(insira)
 print(vetorCriado)
