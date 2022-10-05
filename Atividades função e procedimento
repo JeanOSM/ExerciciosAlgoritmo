@@ -122,3 +122,58 @@ def calcularTabuada(a):
 
 num1=int(input("Escolha o valor da tabuada:"))
 calcularTabuada(num1)
+
+
+
+
+#1 criar uma função - criar vetor()- que receba um valor inteiro por parametro prepresentando o tamanho do vetor.
+#  A função deverá criar o vetor, preenchendo com valores aleatorios entre 1-200 e retornar o valor preenchido
+# No algoritmo principal, solicite o tamanho do vetor ao usuario e crie o vetor com a função.
+#
+#2Crie uma Procedimento chamada exibirVetor(). Que exiba um vetor recebido por parametro .
+#3 Crie uma função chamada somaImpares() que calcule a soma de todos os numeros impares de um vetor recebido no parametro no algoritmo principal.
+#4 implemente um procedimento chamado busca que recebe por parametro um numero informado pelo usuario.
+#  O procedimento deve usando a busca sequencial exibir na tela se o numero esta 
+# ou não presente em um vetor tambem recebido por parametro. 
+import random
+def criarVetor(num):
+    vetor=[0]*num
+
+    for i in range (0,len(vetor)):
+        vetor[i]=random.randint(1,200)
+        
+    return vetor
+
+def exibirVetor(exibir):
+   for i in range (0,len(exibir)):
+        print("na posição", i, "o valor", exibir[i])
+
+
+def somarImpares(recebido):
+    soma1=0
+
+
+    for i in range (0,len(recebido)):
+        
+        if(recebido[i] % 2== 1):
+            soma=recebido[i]
+            soma1=soma1+soma
+    return soma1
+            
+
+
+
+
+insira= int(input("Insira um Numero PAra tamanho do vetor:"))
+vetorCriado=criarVetor(insira)
+print(vetorCriado)
+
+
+# vetor=[0]*10
+# for i in range(0,len(vetor)):
+#     vetor[i]= random.randint(1,200)
+
+exibirVetor(vetorCriado)
+
+x= somarImpares(vetorCriado)
+print(x)
